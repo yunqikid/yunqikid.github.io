@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqikid.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-11T08:49:10.874Z</updated>
+    <updated>2021-03-11T09:10:50.905Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqikid.github.io"/>
     <link rel="self" href="https://yunqikid.github.io/atom.xml"/>
@@ -47,7 +47,7 @@
 <li>同步失败</li>
 <li>手机浏览器显示无法连接到服务器</li>
 </ul>
-<p>GitHub Pages连接不上服务器通过<a href="https://zhuanlan.zhihu.com/p/168760260">修改DNS</a>可以正常访问了；同步失败是因为分支选错了默认的分区是main分区不是master；直到用Gridea搭完博客还是不知道为什么Hexo在推到远端的时候一直卡住。现在电脑可以访问博客啦，但是手机还是不可以正常的访问。把文章发到Gridea同步的时候好慢好慢啊🥲</p>
+<p>GitHub Pages连接不上服务器通过<a href="https://zhuanlan.zhihu.com/p/168760260">修改DNS</a>可以正常访问了；同步失败是因为分支选错了默认的分区是main分区不是master；直到用Gridea搭完博客还是不知道为什么Hexo在推到远端的时候一直卡住。现在电脑可以访问博客啦，但其他的设备还是不可以访问太糟糕了。还是需要一步步的折腾和学习。</p>
 <p>生命在于折腾嘛，什么事都嫌麻烦的话那睡觉是最好的选择了。</p>
 <p>2021.3.5</p>
 ]]></content>
