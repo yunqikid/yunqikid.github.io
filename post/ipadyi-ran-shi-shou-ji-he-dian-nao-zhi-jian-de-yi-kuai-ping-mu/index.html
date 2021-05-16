@@ -1,94 +1,92 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>iPad：依然是手机和电脑之间的一块屏幕 | Gridea</title>
 <meta name="description" content="分享我的视界">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://yunqikid.github.io/favicon.ico?v=1620536014887">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://yunqikid.github.io/favicon.ico?v=1621168557461">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://yunqikid.github.io/styles/main.css">
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://yunqikid.github.io">Gridea</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                文章归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签列表
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/about" class="menu">
-                关于
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yunqikid.github.io">
+        <img class="avatar" src="https://yunqikid.github.io/images/avatar.png?v=1621168557461" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yunqikid.github.io">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>iPad：依然是手机和电脑之间的一块屏幕</h1>
-            <p class="article-meta">
-              2021-05-09
-              
-            </p>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            文章归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签列表
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">iPad：依然是手机和电脑之间的一块屏幕</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-05-09</span>
             
-            <div class="post-content">
-              <p>我听了苹果的邪&quot;你的下一台电脑何必是 电脑&quot;，在等 ARM 架构MacBook 上市的过程中我买了一台 iPad Pro，这个过程真的是非常的痛苦，等 MacBook Pro M1 到了之后立就开启了幸福生活。不是说 iPad 不行而是 iPad 不能完全的贴合我学习/工作的场景。</p>
+          </div>
+          <div class="post-content">
+            <p>我听了苹果的邪&quot;你的下一台电脑何必是 电脑&quot;，在等 ARM 架构MacBook 上市的过程中我买了一台 iPad Pro，这个过程真的是非常的痛苦，等 MacBook Pro M1 到了之后立就开启了幸福生活。不是说 iPad 不行而是 iPad 不能完全的贴合我学习/工作的场景。</p>
 <p>开机，点亮屏幕，滑动屏幕，解锁，回到主页。<br>
 没错这是熟悉的操作逻辑，和 iOS 一样的操作逻辑 。非全面屏的 iPad 对应非全面屏的 iPhone，全面屏的 iPad 对应全面屏的 iPhone。<br>
 iPadOS 由 iOS 演变来的而 iOS 最开始还叫 iPhoneOS，所以 iPadOS 的&quot;手机感&quot;很强。在 iOS 上的分屏应用只能这样，iPadOS 分屏只能单个打开或分屏双开最多加一个侧划显示三个应用。iPad打开软件就能用大大缩短了从想工作到开始工作的时间而 iPhone 也是这样的，如果恰好你有一只 Apple Pencil 敲击 iPad 屏幕马上就可以写字涂鸦不错过任何一个灵感。&quot;手机感&quot;也为 iPad 带来简洁易用的界面和操作方式，它没有 PC 上复杂的快捷键，上手 iPad 是一件非常轻松的事它的操作具有的亲和力比电脑给我的亲和力强多了，要实现电脑一些软件的操作或者是系统的操作完全可以写一本书了甚至一个软件就可以写一本书了，但 iPad 只要用上在手机上一样的软件你就能马上上手。</p>
@@ -104,117 +102,52 @@ iPadOS 由 iOS 演变来的而 iOS 最开始还叫 iPhoneOS，所以 iPadOS 的&
 </blockquote>
 <p>iPad 的操作逻辑比起 Mac 和 PC明显更贴近我们日常的操作习惯，它没有电脑上那么多快捷键需要去记所有的应用都可以用手指去直观操作，它是个包容性很大的产品不需要你过多的去熟悉它能让你快速的上手。在iPadOS支持了键盘鼠标后可操作的空间更多了，也有了一些在 Mac 上才有的快捷键就比如超好用的聚焦搜索(Spotlight)，现在的 iPad Pro 也已经用上了和 Mac 一样的 Apple SIlicon 也就说明在 iPad 上运行 macOS 一点问题都没有了在搭载 M 系列芯片的 Mac 上也已经可以运行 iOS/iPadOS 软件了但在 iPhone 和 iPad 上还是不能运行 Mac 软件。至于 iPadOS会不会和 macOS「Fusion」或者是运行一些 macOS 上的软件请看 WWDC 。如果 iPad Pro 可以运行 macOS 的一些软件那触屏版的 Mac 也就有了呀。</p>
 
-            </div>
-          </article>
+          </div>
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
-              </div>
-              <a href="https://yunqikid.github.io/post/wo-ting-shuo-xia-yi-dai-de-ipad-pro-hui-da-zai-lei-dian-jie-kou/">
-                <h3 class="post-title">
-                  我听说下一代的iPad Pro会搭载雷电接口
-                </h3>
-              </a>
-            </div>
-          
-        </div>
+
         
+          <div class="next-post">
+            <a class="purple-link" href="https://yunqikid.github.io/post/wo-ting-shuo-xia-yi-dai-de-ipad-pro-hui-da-zai-lei-dian-jie-kou/">
+              <h3 class="post-title">
+                下一篇：我听说下一代的iPad Pro会搭载雷电接口
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://yunqikid.github.io/images/avatar.png?v=1620536014887" class="no-responsive avatar">
-    <div class="text-muted">分享我的视界</div>
-    <div class="social-container">
       
-        
+
+      <div class="site-footer">
+  <div class="slogan">分享我的视界</div>
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/ipadyi-ran-shi-shou-ji-he-dian-nao-zhi-jian-de-yi-kuai-ping-mu/">iPad：依然是手机和电脑之间的一块屏幕</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/wo-ting-shuo-xia-yi-dai-de-ipad-pro-hui-da-zai-lei-dian-jie-kou/">我听说下一代的iPad Pro会搭载雷电接口</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/mei-miao-de-duo-dian-hong-kong/">美妙的多点触控</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/sheng-ming-zai-yu-zhe-teng/">生命在于折腾</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/about/">关于</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/hello-gridea/">Hello Gridea</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://yunqikid.github.io/tag/wXCX69x9x/" class="badge ">
-          Gridea
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yunqikid.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yunqikid.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 

@@ -1,94 +1,92 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>美妙的多点触控 | Gridea</title>
 <meta name="description" content="分享我的视界">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://yunqikid.github.io/favicon.ico?v=1620536014887">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://yunqikid.github.io/favicon.ico?v=1621168557461">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://yunqikid.github.io/styles/main.css">
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://yunqikid.github.io">Gridea</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                文章归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签列表
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/about" class="menu">
-                关于
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yunqikid.github.io">
+        <img class="avatar" src="https://yunqikid.github.io/images/avatar.png?v=1621168557461" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yunqikid.github.io">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>美妙的多点触控</h1>
-            <p class="article-meta">
-              2021-03-16
-              
-            </p>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            文章归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签列表
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">美妙的多点触控</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-03-16</span>
             
-            <div class="post-content">
-              <p>刚开始在体验店里没觉得MacBook的触控板有多好用，原来是因为体验店里的MacBook触控板的跟踪速度是默认的，大面积的滑动时就非常非常不跟手，等自己的MacBook Pro到了设置一通学习了几个手势才认识到MacBook触控板的魔力。</p>
+          </div>
+          <div class="post-content">
+            <p>刚开始在体验店里没觉得MacBook的触控板有多好用，原来是因为体验店里的MacBook触控板的跟踪速度是默认的，大面积的滑动时就非常非常不跟手，等自己的MacBook Pro到了设置一通学习了几个手势才认识到MacBook触控板的魔力。</p>
 <p>蜜月期：</p>
 <ul>
 <li>三指上滑调度中心</li>
@@ -160,117 +158,52 @@
 <p>换优联试了试（Mac没有USB接口好麻烦），电脑开盖后的映射延迟还在。原来以为优联的信号和蓝牙信号的频率是不一样的，原来蓝牙的频段是2.4—2.485GHz的ISM波段，工作的距离也是10m内，那么理论上蓝牙存在飘乎不定的情况使用优联也还是会卡，考虑到耳机和键盘都是蓝牙连接的宿舍的Wi-Fi还是2.4G频段的Wi-Fi路由器对蓝牙稳定性的连接会有影响。</p>
 <p>多点触控不止在手机上创造了无限的可能性在电脑上也创造出了独一份的手势操作实在是一件美妙的事情简直棒。可这美妙的体验伴随些蛋疼的事情让我不得不拥抱普通鼠标去当作一个使用起来比较舒适的补充。觉得鼠标和触控板都不是互相代替的关系而是互补的关系，触控板的手势直观、方便，鼠标的手感更好两者辅助使用不就完美了么。</p>
 
-            </div>
-          </article>
+          </div>
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
-              </div>
-              <a href="https://yunqikid.github.io/post/sheng-ming-zai-yu-zhe-teng/">
-                <h3 class="post-title">
-                  生命在于折腾
-                </h3>
-              </a>
-            </div>
-          
-        </div>
+
         
+          <div class="next-post">
+            <a class="purple-link" href="https://yunqikid.github.io/post/sheng-ming-zai-yu-zhe-teng/">
+              <h3 class="post-title">
+                下一篇：生命在于折腾
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://yunqikid.github.io/images/avatar.png?v=1620536014887" class="no-responsive avatar">
-    <div class="text-muted">分享我的视界</div>
-    <div class="social-container">
       
-        
+
+      <div class="site-footer">
+  <div class="slogan">分享我的视界</div>
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/ipadyi-ran-shi-shou-ji-he-dian-nao-zhi-jian-de-yi-kuai-ping-mu/">iPad：依然是手机和电脑之间的一块屏幕</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/wo-ting-shuo-xia-yi-dai-de-ipad-pro-hui-da-zai-lei-dian-jie-kou/">我听说下一代的iPad Pro会搭载雷电接口</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/mei-miao-de-duo-dian-hong-kong/">美妙的多点触控</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/sheng-ming-zai-yu-zhe-teng/">生命在于折腾</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/about/">关于</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://yunqikid.github.io/post/hello-gridea/">Hello Gridea</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://yunqikid.github.io/tag/wXCX69x9x/" class="badge ">
-          Gridea
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yunqikid.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yunqikid.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
